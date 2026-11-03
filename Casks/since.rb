@@ -1,11 +1,12 @@
 cask "since" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.0"
-  sha256 arm:   "22ff6cfe51d5c4f138807a24610327d2e88c9081fa758176a790a5fac93cd0d8",
-         intel: "6eba4e27be7fe4aa7bc5d5176f14a8bf7311cea646c21b97306039b0063232f0"
+  version "0.1.2"
+  sha256 arm:   "6c0fac4d8107cef8a566f4f9008b343640a9f7b56c8bbab91862a27a20dcebef",
+         intel: "8ec04a2fd705112d2ad044cf67a915337111ea282e2f6aa4fd3e36869b75f88d"
 
-  url "https://github.com/0xa3k5/since/releases/download/v#{version}/Since-#{version}-#{arch}.dmg"
+  url "https://github.com/0xa3k5/since/releases/download/v#{version}/Since-#{version}-#{arch}.dmg",
+      verified: "github.com/0xa3k5/since/"
   name "Since"
   desc "Keyboard-first Git client"
   homepage "https://gitsince.com/"
@@ -16,7 +17,7 @@ cask "since" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: ">= :monterey"
 
   app "Since.app"
 
